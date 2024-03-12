@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It ran the slowest among all of the sort file with random text (Big O in this case/ worst case) with run time of 0m7.222s
+
+sort2 uses: Merge Sort
+
+How do you know?: It ran the fastest among all of the sort file with random text (Big O in this case/ worst case) with run time of  0m0.674s
+
+sort3 uses: Selection Sort
+
+How do you know?: It ran the fastest after sort 2 and slowest before sort 1 so, sort 3 < sort 2 < sort 1, with run time of 0m3.113s

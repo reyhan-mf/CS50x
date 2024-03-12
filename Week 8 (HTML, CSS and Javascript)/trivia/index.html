@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    What is the formula for the force?
+                </h3>
+
+                <div class="button-container">
+                    <button type="button" id = "button1"> force = mass x velocity</button>
+                    <button type="button" id = "button2">force = k (q1q2 / r^2)</button>
+                    <button type="button" id = "button3">force = distance x acceleration</button>
+                    <button type="button" id = "button4">force = mass x acceleration</button>
+                    <button type="button" id = "button5">I don't know</button>
+                    <h3 id = "result"></h1>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                    <h3>
+                        What is the area of rectangle with the same length and width equals 5m ?
+                    </h3>
+                    <form>
+                        <input autocomplete="off" autofocus id ="number" placeholder="answer" type="text">
+                        <input type="submit">
+                    </form>
+                    <h2 id="formresult"></h2>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            function resetButtonColors() {
+                var buttons = document.querySelectorAll('.button-container button');
+                buttons.forEach(function(button) {
+                    button.style.backgroundColor = '';
+                });
+        }
+
+        document.querySelectorAll('.button-container button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                resetButtonColors();
+                if(this.id == 'button4')
+                {
+                    this.style.backgroundColor = 'green';
+                }
+                else if(this.id == 'button5')
+                {
+                    this.style.backgroundColor = 'cyan'
+                }
+                else
+                {
+                    this.style.backgroundColor = 'red';
+                }
+
+                if(this.id == 'button4')
+                {
+                    document.querySelector('#result').innerHTML = 'Correct! :)'
+                }
+                else if(this.id == 'button5')
+                {
+                    document.querySelector('#result').innerHTML = 'Keep learning :))'
+                }
+                else
+                {
+                    document.querySelector('#result').innerHTML = 'Wrong Answer'
+                }
+
+            });
+        });
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+            if(document.querySelector('#number').value == 25)
+            {
+                document.querySelector('#formresult').innerHTML = 'Correct! :)'
+            }
+            else
+            {
+                document.querySelector('#formresult').innerHTML = 'Wrong answer'
+            }
+            // alert('hello, ' + document.querySelector('#number').value);
+            event.preventDefault();
+        });
+        </script>
+    </body>
+</html>

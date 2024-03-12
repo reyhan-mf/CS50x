@@ -1,0 +1,13 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+Answer:
+I could characterize the aura of the listener with the given definition of aura. It said if aura only contains energy, danceability and valence,
+so basically I could calculate the average of that three variable with SQL as the course already discussed to querying. After that I can now
+conclude the listener aura based on the calculated average.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener.
+What better ways of calculating this aura would you propose?
+Answer:
+Those variable is not enough to defining aura of the listener, maybe we can say that danceability, valence and energy are enough but it's not.
+Why? Because those variable mmight not capture all nuances ofo a listener musical preferences, there are many other aspects than that such as
+lyrical sentiment, genre or maybe their habis. So my hypothesize is there are many more aspects we must consider than just energy, valence and danceability.
+Another way to solve that if I could say is using technology called machine learning to determine the aura of the listener.
